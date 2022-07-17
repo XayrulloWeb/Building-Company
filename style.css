@@ -87,8 +87,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 100%;
-        transform: translateX(100%);
+        transform: translateY(100%);
         transition: transform 0.5s ease-in;
         z-index: 10;
     }
@@ -99,6 +100,7 @@
 
     .nav-links a {
         opacity: 0;
+        height: 100px;
     }
 
     .burger {
@@ -107,7 +109,7 @@
 }
 
 .nav-active {
-    transform: translateX(0%);
+    transform: translateY(0%);
 }
 
 @keyframes navLinkFade {
@@ -256,17 +258,19 @@
     font-weight: 500;
 }
 
-@media(max-width: 650px){
-.box_one-start p,
-.box_two-start p,
-.box_three-start {
-    font-size: 16px;
-}
-.box_one-start h3,
-.box_two-start h3,
-.box_three-start h3{
-    font-size: 40px;
-}
+@media(max-width: 650px) {
+
+    .box_one-start p,
+    .box_two-start p,
+    .box_three-start {
+        font-size: 16px;
+    }
+
+    .box_one-start h3,
+    .box_two-start h3,
+    .box_three-start h3 {
+        font-size: 40px;
+    }
 }
 
 /* Abot company */
@@ -344,20 +348,23 @@
     }
 
 }
-@media(max-width: 650px){
+
+@media(max-width: 650px) {
     .about_company-right {
         display: none;
     }
-    .about_company{
+
+    .about_company {
         padding-bottom: 50px;
         margin-bottom: 20px;
     }
-    .about_company-left_texts p{
+
+    .about_company-left_texts p {
         font-size: 16px;
     }
 
-    @media(max-width: 400px){
-        .n{
+    @media(max-width: 400px) {
+        .n {
             display: none;
         }
     }
@@ -398,6 +405,7 @@
 .work_about-bottom-images {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .work_about-bottom_img-start {}
@@ -476,11 +484,8 @@
 }
 
 @media(max-width: 768px) {
-    .work_about-bottom_img{
-       
-      
-    }
-   
+    .work_about-bottom_img {}
+
 }
 
 /* About ===== Quality */
@@ -644,17 +649,25 @@
     .stage_box-start {
         padding: 20px;
     }
-   
+
 }
+
 @media(max-width: 550px) {
-    .stages_boxes{
+    .stages_boxes {
         flex-direction: column;
     }
-    .stage_box-one, .stage_box-two, .stage_box-three, .stage_box-four, .stage_box-five, .stage_box-six{
+
+    .stage_box-one,
+    .stage_box-two,
+    .stage_box-three,
+    .stage_box-four,
+    .stage_box-five,
+    .stage_box-six {
         width: 100%;
     }
 
 }
+
 /* Questions_Answers====== Start */
 
 .questions_answers-background {
@@ -699,7 +712,8 @@
     transition: all .2s ease;
     padding: 5px;
 }
-.questions_answers-box_text-hidden button{
+
+.questions_answers-box_text-hidden button {
     position: relative;
     left: 90%;
     padding: 5px 20px;
@@ -718,13 +732,19 @@
     line-height: 2rem;
     transition: all .2s ease;
 }
-.questions_answers-box_text-hidden.showMenu p{
+
+.questions_answers-box_text-hidden.showMenu p {
     display: block;
     transition: all .2s ease;
 
 }
-@media(max-width: 768px){
-    .questions_answers-box_text-hidden button{
+
+@media(max-width: 768px) {
+    .questions_answers-box_text-hidden button {
         left: 70%;
     }
+}
+
+#about {
+    transition: all 3s ease-in-out;
 }
